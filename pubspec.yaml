@@ -39,7 +39,6 @@ dependencies:
   flutter_map: ^7.0.2
   flutter_riverpod: ^2.6.1
   hooks_riverpod: ^2.6.1
-  riverpod_annotation: ^2.6.1
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -72,7 +71,7 @@ flutter:
     - assets/fonts/
     - assets/icons/
     - assets/images/
-    - assets/json/
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

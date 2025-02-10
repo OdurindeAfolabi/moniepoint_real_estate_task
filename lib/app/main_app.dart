@@ -20,11 +20,23 @@ class _MainAppState extends State<MainApp> with SingleTickerProviderStateMixin {
   int _currentPageIndex = 2;
 
   final List<Widget> _pages = [
-    const MapHomeView(),
-    Container(), // Chat Screen Placeholder
+    const MapScreen(),
+    const Scaffold(
+      body: Center(
+        child: Text("Chat Screen",style: TextStyle(color: Colors.black),),
+      ),
+    ), // Chat Screen Placeholder
     const HomeScreen(),
-    Container(), // Heart Screen Placeholder
-    Container(), // Profile Screen Placeholder
+    const Scaffold(
+      body: Center(
+        child: Text("Favorites Screen",style: TextStyle(color: Colors.black),),
+      ),
+    ), //// Heart Screen Placeholder
+    const Scaffold(
+      body: Center(
+        child: Text("Profile Screen",style: TextStyle(color: Colors.black),),
+      ),
+    ), //, // Profile Screen Placeholder
   ];
 
   @override
@@ -148,7 +160,7 @@ class BottomNavItem extends StatelessWidget {
         ),
         child: SvgPicture.asset(
           navbarIcons.values.toList()[index],
-          color: context.colorScheme.surface,
+          colorFilter: ColorFilter.mode( context.colorScheme.surface, BlendMode.srcIn),
           height: isSelected ? 28 : null,
         ),
       ),

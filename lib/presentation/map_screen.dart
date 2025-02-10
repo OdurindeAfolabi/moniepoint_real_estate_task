@@ -29,7 +29,7 @@ class _MapScreenState extends State<MapScreen> with SingleTickerProviderStateMix
   @override
   void initState() {
     super.initState();
-    _loadMapStyles();
+    // _loadMapStyles();
     _animationController = AnimationController(
       vsync: this,
       duration: 700.ms,
@@ -50,10 +50,10 @@ class _MapScreenState extends State<MapScreen> with SingleTickerProviderStateMix
     super.dispose();
   }
 
-  Future _loadMapStyles() async {
-    _darkMapStyle = await rootBundle.loadString(ImagesPaths.darkModeMap);
-    setState(() {});
-  }
+  // Future _loadMapStyles() async {
+  //   _darkMapStyle = await rootBundle.loadString(ImagesPaths.darkModeMap);
+  //   setState(() {});
+  // }
 
   void _setExpandedFalse() {
     setState(() {

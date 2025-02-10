@@ -1,11 +1,8 @@
-
-
- import 'images_paths.dart';
-
+import 'images_paths.dart';
 Map<String, String> navbarIcons = {
   'Search': ImagesPaths.search,
   'Chat': ImagesPaths.chat,
-  'Home': ImagesPaths.home,
+  'Home': ImagesPaths.homeIcon,
   'Heart': ImagesPaths.heart,
   'Profile': ImagesPaths.profile,
 };

@@ -205,7 +205,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   color: Color(0xFFE48E28),
                   shape: BoxShape.circle,
                   image: DecorationImage(
-                    image: AssetImage("assets/images/dp.png"),
+                    image: AssetImage("assets/images/sample_profile_picture.png"),
                     fit: BoxFit.cover,
                   ),
                 ),
