@@ -39,63 +39,63 @@ class _ListOfMarkersWidgetState extends State<ListOfMarkersWidget>
   Widget build(BuildContext context) {
     bool overlayExpanded = widget.isExpanded;
     return Stack(
-      children: [
-        ...List.generate(
-          6,
-          (index) => Positioned(
-            top:
-                context.sizeHeight([0.23, 0.295, 0.5, 0.32, 0.45, 0.55][index]),
-            left: context.sizeWidth([0.3, 0.35, 0.2, 0.7, 0.7, 0.6][index]),
-            child: AnimatedBuilder(
-              animation: _animation,
-              builder: (context, child) {
-                return Align(
+      children: List.generate(
+        6,
+            (index) => Positioned(
+          top: context.sizeHeight([0.23, 0.295, 0.5, 0.32, 0.45, 0.55][index]),
+          left: context.sizeWidth([0.3, 0.35, 0.2, 0.7, 0.7, 0.6][index]),
+          child: AnimatedBuilder(
+            animation: _animation,
+            builder: (context, child) {
+              return Align(
+                alignment: Alignment.bottomLeft,
+                child: Transform.scale(
+                  scale: _animation.value,
                   alignment: Alignment.bottomLeft,
-                  child: Transform.scale(
-                    scale: _animation.value,
-                    alignment: Alignment.bottomLeft,
-                    child: AnimatedContainer(
-                      duration: 800.ms,
-                      width: !overlayExpanded ? 35 : 75,
-                      padding: EdgeInsets.symmetric(
-                          horizontal: !overlayExpanded ? 8 : 12, vertical: 12),
-                      decoration: BoxDecoration(
-                          color: context.colorScheme.primary,
-                          borderRadius: const BorderRadius.only(
-                            topLeft: Radius.circular(12),
-                            topRight: Radius.circular(12),
-                            bottomRight: Radius.circular(12),
-                          )),
-                      child: !overlayExpanded
-                          ? Icon(
-                              Icons.apartment_rounded,
-                              color: context.colorScheme.surface,
-                              size: 20,
-                            )
-                          : AutoSizeText(
-                              [
-                                '10,3 mn ₽',
-                                '11 mn ₽',
-                                '13,3 mn ₽',
-                                '7,8 mn ₽',
-                                '8,5 mn ₽',
-                                '6,95 mn ₽'
-                              ][index],
-                              style: context.textTheme.bodySmall?.copyWith(
-                                fontSize: 10,
-                                color: context.colorScheme.surface,
-                              ),
-                              maxLines: 1,
-                              textAlign: TextAlign.center,
-                            ),
+                  child: AnimatedContainer(
+                    duration: 800.ms,
+                    width: !overlayExpanded ? 35 : 75,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: !overlayExpanded ? 8 : 12,
+                      vertical: 12,
+                    ),
+                    decoration: BoxDecoration(
+                      color: context.colorScheme.primary,
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(12),
+                        topRight: Radius.circular(12),
+                        bottomRight: Radius.circular(12),
+                      ),
+                    ),
+                    child: !overlayExpanded
+                        ? Icon(
+                      Icons.apartment_rounded,
+                      color: context.colorScheme.surface,
+                      size: 20,
+                    )
+                        : AutoSizeText(
+                      [
+                        '10,3 mn ₽',
+                        '11 mn ₽',
+                        '13,3 mn ₽',
+                        '7,8 mn ₽',
+                        '8,5 mn ₽',
+                        '6,95 mn ₽'
+                      ][index],
+                      style: context.textTheme.bodySmall?.copyWith(
+                        fontSize: 10,
+                        color: context.colorScheme.surface,
+                      ),
+                      maxLines: 1,
+                      textAlign: TextAlign.center,
                     ),
                   ),
-                );
-              },
-            ),
+                ),
+              );
+            },
           ),
         ),
-      ],
+      ),
     );
   }
 }

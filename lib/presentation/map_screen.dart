@@ -6,15 +6,15 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:moniepoint_task/presentation/app.dart';
 
-class MapHomeView extends StatefulWidget {
-  const MapHomeView({super.key, this.darkMapStyle});
+class MapScreen extends StatefulWidget {
+  const MapScreen({super.key, this.darkMapStyle});
   final String? darkMapStyle;
 
   @override
-  State<MapHomeView> createState() => MapSampleState();
+  State<MapScreen> createState() => _MapScreenState();
 }
 
-class MapSampleState extends State<MapHomeView> with SingleTickerProviderStateMixin {
+class _MapScreenState extends State<MapScreen> with SingleTickerProviderStateMixin {
   final Completer<GoogleMapController> _controller = Completer<GoogleMapController>();
   final MapController _mapController = MapController();
   late AnimationController _animationController;

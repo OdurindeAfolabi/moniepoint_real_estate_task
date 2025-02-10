@@ -22,7 +22,7 @@ class _MainAppState extends State<MainApp> with SingleTickerProviderStateMixin {
   final List<Widget> _pages = [
     const MapHomeView(),
     Container(), // Chat Screen Placeholder
-    const HomePage(),
+    const HomeScreen(),
     Container(), // Heart Screen Placeholder
     Container(), // Profile Screen Placeholder
   ];
